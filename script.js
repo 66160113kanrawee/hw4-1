@@ -97,3 +97,21 @@ document.getElementById("expense-form").addEventListener("submit", function (e) 
     alert("บันทึกค่าใช้จ่ายสำเร็จ!");
     this.reset();
 });
+
+function renderExpenses(filteredExpenses) {
+    const table = document.getElementById("expense-list");
+    table.innerHTML = ""; // เคลียร์ข้อมูลเก่าก่อน
+
+    filteredExpenses.forEach(expense => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${expense.title}</td>
+            <td>${expense.amount.toFixed(2)} บาท</td>
+            <td>${expense.category}</td>
+            <td>${expense.date}</td>
+        `;
+        table.appendChild(row);
+    });
+
+    updateTotal();
+}
