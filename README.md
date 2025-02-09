@@ -1,1 +1,40 @@
 # hw4-1
+
+- git clone  https://github.com/66160113kanrawee/hw4-1.- git
+- git add .
+- git add .
+- git commit -m "โครงสร้างโปรเจค"
+- git add .
+- git commit -m "เพิ่ม ลิงก์ไฟล์ css และ bootstrap"
+- git add .
+- git commit -m "สร้างแบบฟอร์ม" 
+- git add .
+- git commit -m "สร้างตัวกรอง"
+- git add .
+- git commit -m "สร้างตารางสำหรับสรุปผล"
+- git add .
+- git commit -m "เพิ่มลิ้งก์ไปยังไฟล์ js"
+- git add .
+- git comit -m "ตกแต่งในไฟล์ css"
+- git add .
+- git commit -m "ฟังก์ชันเก็บข้อมูลใน  local storge" 
+- git add .
+- git commit -m "ดึงข้อมูลจาก Local Storage"
+- git add .
+- git commit -m "ฟังก์ชันกรองข้อมูล"
+- git add .
+- git commit -m "ฟังก์ชันล้างตัวกรอง"
+- git add .
+- git commit -m "เพิ่มข้อมูลค่าใช้จ่ายใหม่ลงใน Local Storage"
+- git add .
+- git commit -m "ดึงรายการค่าใช้จ่ายที่มีวันที่ตรงกับค่าที่กำหนด"
+- git add .
+- git commit -m "คำนวณยอดรวมของค่าใช้จ่ายในหมวดหมู่ที่กำหนด"
+- git add .
+- git commit -m "เพิ่มรายการค่าใช้จ่ายใหม่เข้าไปใน <table> บนหน้าเว็บ "
+- git add .
+- git commit -m "คำนวณยอดรวมของค่าใช้จ่ายทั้งหมดในตาราง"
+- git add .
+- git commit -m " แสดงรายการค่าใช้จ่ายในตาราง"
+- git add .
+- git commit -m "คำนวณยอดรวมของค่าใช้จ่ายทั้งหมด และ อัปเดตผลรวมใน HTML"
