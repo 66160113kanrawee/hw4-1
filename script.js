@@ -5,3 +5,25 @@ function saveToLocalStorage(expenses) {
     const storedData = localStorage.getItem("expenses");
     return storedData ? JSON.parse(storedData) : [];
   } 
+  function filterExpenses() {
+    const categoryFilter = document.getElementById("filter-category").value;
+    const startDate = document.getElementById("filter-start-date").value;
+    const endDate = document.getElementById("filter-end-date").value;
+
+    const filtered = expenses.filter(exp => {
+        let categoryMatch = categoryFilter === "all" || exp.category === categoryFilter;
+        let dateMatch = true;
+
+        if (startDate && endDate) {
+            dateMatch = exp.date >= startDate && exp.date <= endDate;
+        } else if (startDate) {
+            dateMatch = exp.date >= startDate;
+        } else if (endDate) {
+            dateMatch = exp.date <= endDate;
+        }
+
+        return categoryMatch && dateMatch;
+    });
+
+    renderExpenses(filtered);
+}
