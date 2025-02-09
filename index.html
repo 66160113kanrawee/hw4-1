@@ -35,5 +35,24 @@
         </form>
     </div><br>
     <hr><br>
+    <div class="filter">
+        <label for="filter-category">ประเภท: </label>
+        <select id="filter-category">
+            <option value="all">ทั้งหมด</option>
+            <option value="food">อาหาร</option>
+            <option value="shopping">ช้อปปิ้ง</option>
+            <option value="transport">การเดินทาง</option>
+        </select>
+
+        <label for="filter-start-date">จากวันที่: </label>
+        <input type="date" id="filter-start-date">
+
+        <label for="filter-end-date">ถึงวันที่: </label>
+        <input type="date" id="filter-end-date">
+
+        <button onclick="filterExpenses()">กรอง</button>
+        <button onclick="resetFilter()">ล้างตัวกรอง</button>
+
+    </div><br><br>
 </body>
 </html>
