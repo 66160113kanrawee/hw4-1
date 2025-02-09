@@ -115,3 +115,7 @@ function renderExpenses(filteredExpenses) {
 
     updateTotal();
 }
+function updateTotal() {
+    let total = expenses.reduce((sum, exp) => sum + exp.amount, 0);
+    document.getElementById("total-amount").textContent = total.toFixed(2);
+}
