@@ -41,4 +41,10 @@ function addExpense(expenseData) {
 function getExpensesByDate(date) {
     const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
     return expenses.filter(expense => expense.date === date);
+}
+function calculateTotalByCategory(category) {
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    return expenses
+      .filter(expense => expense.category === category)
+      .reduce((total, expense) => total + expense.amount, 0);
   }
