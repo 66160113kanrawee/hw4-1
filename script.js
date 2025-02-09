@@ -27,3 +27,9 @@ function saveToLocalStorage(expenses) {
 
     renderExpenses(filtered);
 }
+function resetFilter() {
+    document.getElementById("filter-category").value = "all";
+    document.getElementById("filter-start-date").value = "";
+    document.getElementById("filter-end-date").value = "";
+    renderExpenses(expenses);
+}
