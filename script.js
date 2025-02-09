@@ -37,4 +37,8 @@ function addExpense(expenseData) {
     const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
     expenses.push(expenseData);
     localStorage.setItem("expenses", JSON.stringify(expenses));
+}
+function getExpensesByDate(date) {
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    return expenses.filter(expense => expense.date === date);
   }
