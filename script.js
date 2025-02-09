@@ -79,3 +79,21 @@ function updateTotal() {
     document.getElementById("total-amount").textContent = total.toFixed(2);
 }
 let expenses = [];
+
+document.getElementById("expense-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    const expenseData = {
+        id: Date.now().toString(),
+        title: document.getElementById("title").value,
+        amount: parseFloat(document.getElementById("amount").value),
+        category: document.getElementById("category").value,
+        date: document.getElementById("date").value
+    };
+
+    expenses.push(expenseData);
+    renderExpenses(expenses);
+    updateTotal();
+    alert("บันทึกค่าใช้จ่ายสำเร็จ!");
+    this.reset();
+});
