@@ -48,3 +48,13 @@ function calculateTotalByCategory(category) {
       .filter(expense => expense.category === category)
       .reduce((total, expense) => total + expense.amount, 0);
   }
+  function generateMonthlyReport(year, month) {
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    return expenses.filter(expense => {
+      const expenseDate = new Date(expense.date);
+      return (
+        expenseDate.getFullYear() === year &&
+        expenseDate.getMonth() + 1 === month
+      );
+    });
+  }
