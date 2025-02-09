@@ -58,3 +58,16 @@ function calculateTotalByCategory(category) {
       );
     });
   }
+  function addExpense(expense) {
+    const table = document.getElementById("expense-list");
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${expense.title}</td>
+        <td>${expense.amount.toFixed(2)} บาท</td>
+        <td>${expense.category}</td>
+        <td>${expense.date}</td>
+    `;
+    
+    table.appendChild(row);
+}
