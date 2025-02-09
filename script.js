@@ -71,3 +71,11 @@ function calculateTotalByCategory(category) {
     
     table.appendChild(row);
 }
+function updateTotal() {
+    let total = 0;
+    document.querySelectorAll("#expense-list tr td:nth-child(2)").forEach(td => {
+        total += parseFloat(td.textContent);
+    });
+    document.getElementById("total-amount").textContent = total.toFixed(2);
+}
+let expenses = [];
