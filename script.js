@@ -33,3 +33,8 @@ function resetFilter() {
     document.getElementById("filter-end-date").value = "";
     renderExpenses(expenses);
 }
+function addExpense(expenseData) {
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    expenses.push(expenseData);
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }
