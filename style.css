@@ -1,0 +1,17 @@
+.h2 {
+    text-align: center;
+    padding: 2%;
+}
+
+#expense-form {
+    text-align: center;
+}
+
+.filter {
+    text-align: center;
+}
+
+#expense-summary {
+    margin-left: 22%;
+    padding-right: 22%;
+}
